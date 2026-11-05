@@ -1,25 +1,35 @@
-# Python
+# ============ Python ============
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-
-# 打包文件
 *.egg-info/
 dist/
 build/
 *.egg
 
-# 环境变量
+# ============ Node.js / React 前端 ============
+# 应当忽略，依赖包由 npm install 重新生成
+node_modules/
+dist/
+build/
+.vite/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============ 环境变量 ============
 .env
 .env.local
 .env.*.local
 *.key
 *.pem
 *.crt
+# 👇 注意：删掉了对 .env.example 的忽略，模板文件必须保留
 
-# 数据库和数据
+# ============ 数据库和数据 ============
 data/
 *.db
 *.sqlite
@@ -31,28 +41,20 @@ downloads/
 logs/
 *.log
 
-# ============ IDE (PyCharm) ============
+# ============ IDE (PyCharm / VSCode) ============
 .idea/
 *.iml
 *.swp
 *.swo
 *~
 
-# VSCode（如果你不用，可以删掉这行）
-#.vscode/
-
-# 测试
+# ============ 测试缓存 (注意：删除了 tests/，保留测试代码) ============
 .pytest_cache/
 .coverage
 htmlcov/
 .tox/
 .mypy_cache/
 .ruff_cache/
-tests/
-
-# ============ Jupyter ============
-#.ipynb_checkpoints/
-#*.ipynb
 
 # ============ 系统文件 ============
 .DS_Store
@@ -65,16 +67,8 @@ temp/
 *.tmp
 *.bak
 
-# ============ 项目特定 ============
-# Conda 环境锁文件（如果你不想提交精确版本）
-environment-full.yml
-# 但保留 environment.yml（from-history版本）
-
-# 项目的配置文件示例（保留示例，忽略真实配置）
-.env.example  # 注意：这个文件应该提交！它只是模板
-*.local
-
-# 如果你用Docker
-.dockerignore  # 这个要保留并提交
-
+# ============ 项目特定：大模型权重 ============
+# 假设你的 BGE 模型放在 data/models/ 下，data/ 已经被忽略了
+# 如果模型存在其他路径，请改为对应路径，避免误传大文件
 models/
+environment-full.yml

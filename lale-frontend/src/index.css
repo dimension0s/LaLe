@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+body {
+  background-color: #fcfcfc;
+  color: #333333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* 干掉浏览器原生的深色选区 */
+::selection {
+  background-color: transparent !important;
+  text-shadow: none !important;
+}
+
+/* 框选时的鼠标状态平滑处理 */
+.pdf-text-layer-container {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* 彻底干掉 Modal 默认的白底和内外边距 */
+.ant-modal-content {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.ant-modal-body {
+  padding: 0 !important;
+}
