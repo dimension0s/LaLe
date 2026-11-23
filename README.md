@@ -31,7 +31,6 @@
 2. **物理与软删除**：账户注销支持物理级联删除（数据库记录 + 物理文件）；文档/笔记删除移入回收站。
 ##  系统架构
 
-```mermaid
 flowchart LR
     User([用户]) --> FE["React 前端 (React-PDF + Canvas)"]
     FE <-->|"RESTful / SSE"| API[FastAPI 后端]
