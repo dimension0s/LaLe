@@ -50,7 +50,6 @@ flowchart LR
 
 ---
 
-```markdown
 ##  快速开始
 
 ### 环境要求
@@ -72,8 +71,7 @@ cp .env.example .env
 
 ---
 
-```markdown
-## 🧠 核心技术实现
+## 核心技术实现
 
 ### 1. Agent 工具调用与推理 (ReAct)
 - **实现逻辑**：大模型接收任务后，基于 ReAct (Reasoning + Acting) 范式自主拆解任务。遇到生僻词汇或复杂长难句时，并发调用本地 RAG（混合检索 + Rerank）与 Web 联网搜索工具。
