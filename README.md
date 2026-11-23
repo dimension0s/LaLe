@@ -59,7 +59,6 @@ flowchart LR
 
 ### 后端部署
 
-```bash
 # 创建并激活虚拟环境 (推荐 Conda)
 conda create -n lale python=3.11 -y
 conda activate lale
